@@ -14,10 +14,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-## `Connect Wallet` button
+## Connect Wallet button
 
 opens up MetaMask and allows you to connect your MetaMask wallet to your page
 
-## `Sign Contract` button
+## Sign Contract button
 
 calls the approve method upon a smart contract, on the behalf of the connected wallet

@@ -1,18 +1,17 @@
 import { ethers } from 'ethers';
 
-let CONTRACT_ADDRESS = '0xBA62BCfcAaFc6622853cca2BE6Ac7d845BC0f2Dc';
-let ABI_ADDRESS = 'http://api-goerli.etherscan.io/api?module=contract&action=getabi&address=0xba62bcfcaafc6622853cca2be6ac7d845bc0f2dc&format=raw';
+const CONTRACT_ADDRESS = '0xBA62BCfcAaFc6622853cca2BE6Ac7d845BC0f2Dc';
+const ABI_ADDRESS = 'http://api-goerli.etherscan.io/api?module=contract&action=getabi&address=0xba62bcfcaafc6622853cca2be6ac7d845bc0f2dc&format=raw';
 
 
-
+// ContractButton that calls the approve method upon a smart contract, on the behalf of the connected wallet
 export const ContractButton = () => {
-  // ContractButton that calls the approve method upon a smart contract, on the behalf of the connected wallet
   
   const getContract = async () => {
     // get abi
     const fetchAbi = async () => {
-      let response = await fetch(ABI_ADDRESS);
-      let data = await response.json();
+      const response = await fetch(ABI_ADDRESS);
+      const data = await response.json();
       return data;
     }
     const abi = await fetchAbi();
